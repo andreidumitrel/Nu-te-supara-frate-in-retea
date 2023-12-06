@@ -46,20 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Albastru.cs" />
     <Compile Include="fereastraJoc.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="fereastraJoc.Designer.cs">
       <DependentUpon>fereastraJoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="Jucator.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pion.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rosu.cs" />
     <Compile Include="tabla_joc.cs" />
     <Compile Include="Zar.cs" />
     <EmbeddedResource Include="fereastraJoc.resx">
@@ -76,6 +80,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -89,6 +94,26 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="nu_te_supara_frate_colorat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pionAlbastru.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pionRosu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\nu_te_supara_frate_colorat.png" />
+    <Content Include="Resources\pionAlbastru.png" />
+    <Content Include="Resources\pionRosu.png" />
+    <Content Include="Resources\zar1.png" />
+    <Content Include="Resources\zar2.png" />
+    <Content Include="Resources\zar3.png" />
+    <Content Include="Resources\zar4.png" />
+    <Content Include="Resources\zar5.png" />
+    <Content Include="Resources\zar6.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
