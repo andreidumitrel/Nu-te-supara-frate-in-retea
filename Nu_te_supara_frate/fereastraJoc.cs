@@ -14,11 +14,13 @@ namespace Nu_te_supara_frate
     public partial class fereastraJoc : Form
     {
         Zar zar;
+        Rosu rosu;
         public fereastraJoc()
         {
             InitializeComponent();
             labelNumeJucator.Text = Login.numeJucator;
             zar = new Zar();
+            rosu = new Rosu();
         }
 
         private void panelJoc_Paint(object sender, PaintEventArgs e)
@@ -38,7 +40,11 @@ namespace Nu_te_supara_frate
 
         private void DaCuZarul(object sender, EventArgs e)
         {
-            zar.daCuZarul(this);
+            
+            pRosu1.Location =  rosu.Coordonate[zar.daCuZarul(this)];
+
+
         }
+
     }
 }

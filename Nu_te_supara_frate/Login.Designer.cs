@@ -85,11 +85,11 @@
             this.buttonStart.Text = "Start";
             this.buttonStart.UseVisualStyleBackColor = false;
             this.buttonStart.Click += new System.EventHandler(this.buttonStart_click);
-           // this.buttonStart.KeyDown += new System.Windows.Forms.KeyEventHandler(this.enterButtonDown);
             this.buttonStart.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.enterButtonDown);
             // 
             // Login
             // 
+            this.AcceptButton = this.buttonStart;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));

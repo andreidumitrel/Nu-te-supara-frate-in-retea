@@ -63,6 +63,16 @@ namespace Nu_te_supara_frate.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap curcubeu {
+            get {
+                object obj = ResourceManager.GetObject("curcubeu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap nu_te_supara_frate_colorat {
             get {
                 object obj = ResourceManager.GetObject("nu_te_supara_frate_colorat", resourceCulture);

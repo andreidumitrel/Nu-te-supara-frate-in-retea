@@ -14,15 +14,12 @@ namespace Nu_te_supara_frate
         public Zar() {
             numar_zar = 1;
         }
-        private int getZar() { 
-            Random rnd = new Random();  
-            int numarRandom = rnd.Next(1,7);
-            return numarRandom;
-        }
-        public void daCuZarul(fereastraJoc ferJoc)
+        public int daCuZarul(fereastraJoc ferJoc)
         {
             
-            int numar_zar = this.getZar();
+            Random rnd = new Random();
+
+            int numar_zar = rnd.Next(1,7);
 
 
 
@@ -31,24 +28,30 @@ namespace Nu_te_supara_frate
 
                 case 1:
                     ferJoc.zar1.Image = Resources.zar1;
-                    break;
+                    return numar_zar;
                 case 2:
                     ferJoc.zar1.Image = Resources.zar2;
-                    break;
+                    return numar_zar;
                 case 3:
                     ferJoc.zar1.Image = Resources.zar3;
-                    break;
+                    return numar_zar;
                 case 4:
                     ferJoc.zar1.Image = Resources.zar4;
-                    break;
+                    return numar_zar;
                 case 5:
                     ferJoc.zar1.Image = Resources.zar5;
-                    break;
+                    return numar_zar;
                 case 6:
                     ferJoc.zar1.Image = Resources.zar6;
-                    break;
-            }
+                    return numar_zar;
 
+            }
+            return numar_zar;
+
+        }
+        public int getNumarZar()
+        {
+            return numar_zar;
         }
     }
 }

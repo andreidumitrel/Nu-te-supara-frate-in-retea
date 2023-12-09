@@ -56,7 +56,7 @@
             // 
             // panelJoc
             // 
-            this.panelJoc.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelJoc.BackgroundImage")));
+            this.panelJoc.BackgroundImage = global::Nu_te_supara_frate.Properties.Resources.nu_te_supara_frate_colorat;
             this.panelJoc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelJoc.Controls.Add(this.pRosu4);
             this.panelJoc.Controls.Add(this.pRosu3);
@@ -70,7 +70,7 @@
             this.panelJoc.Location = new System.Drawing.Point(12, 12);
             this.panelJoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelJoc.Name = "panelJoc";
-            this.panelJoc.Size = new System.Drawing.Size(701, 702);
+            this.panelJoc.Size = new System.Drawing.Size(701, 701);
             this.panelJoc.TabIndex = 0;
             this.panelJoc.Paint += new System.Windows.Forms.PaintEventHandler(this.panelJoc_Paint);
             // 
@@ -111,7 +111,7 @@
             // 
             this.pRosu1.BackColor = System.Drawing.Color.Transparent;
             this.pRosu1.Image = ((System.Drawing.Image)(resources.GetObject("pRosu1.Image")));
-            this.pRosu1.Location = new System.Drawing.Point(28, 650);
+            this.pRosu1.Location = new System.Drawing.Point(28, 652);
             this.pRosu1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pRosu1.Name = "pRosu1";
             this.pRosu1.Size = new System.Drawing.Size(37, 46);
@@ -121,9 +121,9 @@
             // pAlbastru4
             // 
             this.pAlbastru4.BackColor = System.Drawing.Color.Transparent;
-            this.pAlbastru4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pAlbastru4.BackgroundImage")));
+            this.pAlbastru4.BackgroundImage = global::Nu_te_supara_frate.Properties.Resources.pionAlbastru;
             this.pAlbastru4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pAlbastru4.Image = ((System.Drawing.Image)(resources.GetObject("pAlbastru4.Image")));
+            this.pAlbastru4.Image = global::Nu_te_supara_frate.Properties.Resources.pionAlbastru;
             this.pAlbastru4.Location = new System.Drawing.Point(621, 78);
             this.pAlbastru4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pAlbastru4.Name = "pAlbastru4";
@@ -134,9 +134,9 @@
             // pAlbastru3
             // 
             this.pAlbastru3.BackColor = System.Drawing.Color.Transparent;
-            this.pAlbastru3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pAlbastru3.BackgroundImage")));
+            this.pAlbastru3.BackgroundImage = global::Nu_te_supara_frate.Properties.Resources.pionAlbastru;
             this.pAlbastru3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pAlbastru3.Image = ((System.Drawing.Image)(resources.GetObject("pAlbastru3.Image")));
+            this.pAlbastru3.Image = global::Nu_te_supara_frate.Properties.Resources.pionAlbastru;
             this.pAlbastru3.Location = new System.Drawing.Point(576, 78);
             this.pAlbastru3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pAlbastru3.Name = "pAlbastru3";
@@ -147,9 +147,9 @@
             // pAlbastru2
             // 
             this.pAlbastru2.BackColor = System.Drawing.Color.Transparent;
-            this.pAlbastru2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pAlbastru2.BackgroundImage")));
+            this.pAlbastru2.BackgroundImage = global::Nu_te_supara_frate.Properties.Resources.pionAlbastru;
             this.pAlbastru2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pAlbastru2.Image = ((System.Drawing.Image)(resources.GetObject("pAlbastru2.Image")));
+            this.pAlbastru2.Image = global::Nu_te_supara_frate.Properties.Resources.pionAlbastru;
             this.pAlbastru2.Location = new System.Drawing.Point(621, 30);
             this.pAlbastru2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pAlbastru2.Name = "pAlbastru2";
@@ -160,10 +160,10 @@
             // pAlbastru1
             // 
             this.pAlbastru1.BackColor = System.Drawing.Color.Transparent;
-            this.pAlbastru1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pAlbastru1.BackgroundImage")));
+            this.pAlbastru1.BackgroundImage = global::Nu_te_supara_frate.Properties.Resources.pionAlbastru;
             this.pAlbastru1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pAlbastru1.Image = ((System.Drawing.Image)(resources.GetObject("pAlbastru1.Image")));
-            this.pAlbastru1.Location = new System.Drawing.Point(281, 637);
+            this.pAlbastru1.Image = global::Nu_te_supara_frate.Properties.Resources.pionAlbastru;
+            this.pAlbastru1.Location = new System.Drawing.Point(575, 31);
             this.pAlbastru1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pAlbastru1.Name = "pAlbastru1";
             this.pAlbastru1.Size = new System.Drawing.Size(40, 43);
@@ -205,7 +205,7 @@
             // 
             // zar1
             // 
-            this.zar1.Image = ((System.Drawing.Image)(resources.GetObject("zar1.Image")));
+            this.zar1.Image = global::Nu_te_supara_frate.Properties.Resources.zar1;
             this.zar1.Location = new System.Drawing.Point(755, 122);
             this.zar1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.zar1.Name = "zar1";
@@ -219,12 +219,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1215, 720);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1215, 748);
             this.Controls.Add(this.zar1);
             this.Controls.Add(this.exitButton_Joc);
             this.Controls.Add(this.labelNumeJucator);
             this.Controls.Add(this.panelJoc);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "fereastraJoc";
             this.Text = "Nu te supăra frate";
             this.panelJoc.ResumeLayout(false);
