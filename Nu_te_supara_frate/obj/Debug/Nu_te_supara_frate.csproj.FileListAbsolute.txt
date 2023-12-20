@@ -2,11 +2,11 @@ C:\Users\andre\OneDrive\Desktop\ProiectPOO\Nu_te_supara_frate\bin\Debug\Nu_te_su
 C:\Users\andre\OneDrive\Desktop\ProiectPOO\Nu_te_supara_frate\bin\Debug\Nu_te_supara_frate.exe
 C:\Users\andre\OneDrive\Desktop\ProiectPOO\Nu_te_supara_frate\bin\Debug\Nu_te_supara_frate.pdb
 C:\Users\andre\OneDrive\Desktop\ProiectPOO\Nu_te_supara_frate\obj\Debug\Nu_te_supara_frate.csproj.AssemblyReference.cache
+C:\Users\andre\OneDrive\Desktop\ProiectPOO\Nu_te_supara_frate\obj\Debug\Nu_te_supara_frate.FereastraCastig.resources
+C:\Users\andre\OneDrive\Desktop\ProiectPOO\Nu_te_supara_frate\obj\Debug\Nu_te_supara_frate.fereastraJoc.resources
 C:\Users\andre\OneDrive\Desktop\ProiectPOO\Nu_te_supara_frate\obj\Debug\Nu_te_supara_frate.Login.resources
 C:\Users\andre\OneDrive\Desktop\ProiectPOO\Nu_te_supara_frate\obj\Debug\Nu_te_supara_frate.Properties.Resources.resources
 C:\Users\andre\OneDrive\Desktop\ProiectPOO\Nu_te_supara_frate\obj\Debug\Nu_te_supara_frate.csproj.GenerateResource.cache
 C:\Users\andre\OneDrive\Desktop\ProiectPOO\Nu_te_supara_frate\obj\Debug\Nu_te_supara_frate.csproj.CoreCompileInputs.cache
 C:\Users\andre\OneDrive\Desktop\ProiectPOO\Nu_te_supara_frate\obj\Debug\Nu_te_supara_frate.exe
 C:\Users\andre\OneDrive\Desktop\ProiectPOO\Nu_te_supara_frate\obj\Debug\Nu_te_supara_frate.pdb
-C:\Users\andre\OneDrive\Desktop\ProiectPOO\Nu_te_supara_frate\obj\Debug\Nu_te_supara_frate.fereastraJoc.resources
-C:\Users\andre\OneDrive\Desktop\ProiectPOO\Nu_te_supara_frate\obj\Debug\Nu_te_supara_frate.FereastraCastig.resources

@@ -9,22 +9,24 @@ using System.Threading;
 namespace Nu_te_supara_frate
 {
     internal class Zar
-    {   private
+    {
+        private
             int numar_zar;
-        public Zar() {
+        public Zar()
+        {
             numar_zar = 1;
         }
         public int daCuZarul(fereastraJoc ferJoc)
         {
-            
+
             Random rnd = new Random();
 
-            int numar_zar = rnd.Next(1,7);
+            int numar_zar = rnd.Next(1, 7);
 
 
 
             switch (numar_zar)
-            {   
+            {
 
                 case 1:
                     ferJoc.zar1.Image = Resources.zar1;

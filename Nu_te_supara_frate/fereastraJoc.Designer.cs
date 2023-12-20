@@ -67,10 +67,10 @@
             this.panelJoc.Controls.Add(this.pAlbastru2);
             this.panelJoc.Controls.Add(this.pAlbastru1);
             this.panelJoc.Controls.Add(this.labelSalut);
-            this.panelJoc.Location = new System.Drawing.Point(12, 12);
-            this.panelJoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelJoc.Location = new System.Drawing.Point(9, 10);
+            this.panelJoc.Margin = new System.Windows.Forms.Padding(2);
             this.panelJoc.Name = "panelJoc";
-            this.panelJoc.Size = new System.Drawing.Size(701, 701);
+            this.panelJoc.Size = new System.Drawing.Size(526, 585);
             this.panelJoc.TabIndex = 0;
             this.panelJoc.Paint += new System.Windows.Forms.PaintEventHandler(this.panelJoc_Paint);
             // 
@@ -78,45 +78,49 @@
             // 
             this.pRosu4.BackColor = System.Drawing.Color.Transparent;
             this.pRosu4.Image = ((System.Drawing.Image)(resources.GetObject("pRosu4.Image")));
-            this.pRosu4.Location = new System.Drawing.Point(71, 607);
-            this.pRosu4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pRosu4.Location = new System.Drawing.Point(53, 499);
+            this.pRosu4.Margin = new System.Windows.Forms.Padding(2);
             this.pRosu4.Name = "pRosu4";
-            this.pRosu4.Size = new System.Drawing.Size(39, 46);
+            this.pRosu4.Size = new System.Drawing.Size(29, 37);
             this.pRosu4.TabIndex = 5;
             this.pRosu4.TabStop = false;
+            this.pRosu4.Click += new System.EventHandler(this.pRosu4_Click);
             // 
             // pRosu3
             // 
             this.pRosu3.BackColor = System.Drawing.Color.Transparent;
             this.pRosu3.Image = ((System.Drawing.Image)(resources.GetObject("pRosu3.Image")));
-            this.pRosu3.Location = new System.Drawing.Point(28, 607);
-            this.pRosu3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pRosu3.Location = new System.Drawing.Point(21, 499);
+            this.pRosu3.Margin = new System.Windows.Forms.Padding(2);
             this.pRosu3.Name = "pRosu3";
-            this.pRosu3.Size = new System.Drawing.Size(37, 46);
+            this.pRosu3.Size = new System.Drawing.Size(28, 37);
             this.pRosu3.TabIndex = 4;
             this.pRosu3.TabStop = false;
+            this.pRosu3.Click += new System.EventHandler(this.pRosu3_Click);
             // 
             // pRosu2
             // 
             this.pRosu2.BackColor = System.Drawing.Color.Transparent;
             this.pRosu2.Image = ((System.Drawing.Image)(resources.GetObject("pRosu2.Image")));
-            this.pRosu2.Location = new System.Drawing.Point(71, 650);
-            this.pRosu2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pRosu2.Location = new System.Drawing.Point(53, 540);
+            this.pRosu2.Margin = new System.Windows.Forms.Padding(2);
             this.pRosu2.Name = "pRosu2";
-            this.pRosu2.Size = new System.Drawing.Size(39, 46);
+            this.pRosu2.Size = new System.Drawing.Size(29, 37);
             this.pRosu2.TabIndex = 3;
             this.pRosu2.TabStop = false;
+            this.pRosu2.Click += new System.EventHandler(this.pRosu2_Click);
             // 
             // pRosu1
             // 
             this.pRosu1.BackColor = System.Drawing.Color.Transparent;
             this.pRosu1.Image = ((System.Drawing.Image)(resources.GetObject("pRosu1.Image")));
-            this.pRosu1.Location = new System.Drawing.Point(28, 652);
-            this.pRosu1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pRosu1.Location = new System.Drawing.Point(21, 540);
+            this.pRosu1.Margin = new System.Windows.Forms.Padding(2);
             this.pRosu1.Name = "pRosu1";
-            this.pRosu1.Size = new System.Drawing.Size(37, 46);
+            this.pRosu1.Size = new System.Drawing.Size(28, 37);
             this.pRosu1.TabIndex = 1;
             this.pRosu1.TabStop = false;
+            this.pRosu1.Click += new System.EventHandler(this.pRosu1_Click);
             // 
             // pAlbastru4
             // 
@@ -124,12 +128,13 @@
             this.pAlbastru4.BackgroundImage = global::Nu_te_supara_frate.Properties.Resources.pionAlbastru;
             this.pAlbastru4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pAlbastru4.Image = global::Nu_te_supara_frate.Properties.Resources.pionAlbastru;
-            this.pAlbastru4.Location = new System.Drawing.Point(621, 78);
-            this.pAlbastru4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pAlbastru4.Location = new System.Drawing.Point(462, 59);
+            this.pAlbastru4.Margin = new System.Windows.Forms.Padding(2);
             this.pAlbastru4.Name = "pAlbastru4";
-            this.pAlbastru4.Size = new System.Drawing.Size(40, 43);
+            this.pAlbastru4.Size = new System.Drawing.Size(30, 35);
             this.pAlbastru4.TabIndex = 2;
             this.pAlbastru4.TabStop = false;
+            this.pAlbastru4.Click += new System.EventHandler(this.pAlbastru4_Click);
             // 
             // pAlbastru3
             // 
@@ -137,12 +142,13 @@
             this.pAlbastru3.BackgroundImage = global::Nu_te_supara_frate.Properties.Resources.pionAlbastru;
             this.pAlbastru3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pAlbastru3.Image = global::Nu_te_supara_frate.Properties.Resources.pionAlbastru;
-            this.pAlbastru3.Location = new System.Drawing.Point(576, 78);
-            this.pAlbastru3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pAlbastru3.Location = new System.Drawing.Point(430, 59);
+            this.pAlbastru3.Margin = new System.Windows.Forms.Padding(2);
             this.pAlbastru3.Name = "pAlbastru3";
-            this.pAlbastru3.Size = new System.Drawing.Size(40, 43);
+            this.pAlbastru3.Size = new System.Drawing.Size(30, 35);
             this.pAlbastru3.TabIndex = 2;
             this.pAlbastru3.TabStop = false;
+            this.pAlbastru3.Click += new System.EventHandler(this.pAlbastru3_Click);
             // 
             // pAlbastru2
             // 
@@ -150,12 +156,13 @@
             this.pAlbastru2.BackgroundImage = global::Nu_te_supara_frate.Properties.Resources.pionAlbastru;
             this.pAlbastru2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pAlbastru2.Image = global::Nu_te_supara_frate.Properties.Resources.pionAlbastru;
-            this.pAlbastru2.Location = new System.Drawing.Point(621, 30);
-            this.pAlbastru2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pAlbastru2.Location = new System.Drawing.Point(462, 20);
+            this.pAlbastru2.Margin = new System.Windows.Forms.Padding(2);
             this.pAlbastru2.Name = "pAlbastru2";
-            this.pAlbastru2.Size = new System.Drawing.Size(40, 43);
+            this.pAlbastru2.Size = new System.Drawing.Size(30, 35);
             this.pAlbastru2.TabIndex = 2;
             this.pAlbastru2.TabStop = false;
+            this.pAlbastru2.Click += new System.EventHandler(this.pAlbastru2_Click);
             // 
             // pAlbastru1
             // 
@@ -163,22 +170,23 @@
             this.pAlbastru1.BackgroundImage = global::Nu_te_supara_frate.Properties.Resources.pionAlbastru;
             this.pAlbastru1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pAlbastru1.Image = global::Nu_te_supara_frate.Properties.Resources.pionAlbastru;
-            this.pAlbastru1.Location = new System.Drawing.Point(575, 31);
-            this.pAlbastru1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pAlbastru1.Location = new System.Drawing.Point(430, 20);
+            this.pAlbastru1.Margin = new System.Windows.Forms.Padding(2);
             this.pAlbastru1.Name = "pAlbastru1";
-            this.pAlbastru1.Size = new System.Drawing.Size(40, 43);
+            this.pAlbastru1.Size = new System.Drawing.Size(30, 35);
             this.pAlbastru1.TabIndex = 1;
             this.pAlbastru1.TabStop = false;
-            this.pAlbastru1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pAlbastru1.Click += new System.EventHandler(this.pAlbastru1_Click);
             // 
             // labelSalut
             // 
             this.labelSalut.AutoSize = true;
             this.labelSalut.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSalut.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.labelSalut.Location = new System.Drawing.Point(69, 183);
+            this.labelSalut.Location = new System.Drawing.Point(52, 149);
+            this.labelSalut.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelSalut.Name = "labelSalut";
-            this.labelSalut.Size = new System.Drawing.Size(0, 69);
+            this.labelSalut.Size = new System.Drawing.Size(0, 55);
             this.labelSalut.TabIndex = 0;
             // 
             // labelNumeJucator
@@ -186,18 +194,19 @@
             this.labelNumeJucator.AutoSize = true;
             this.labelNumeJucator.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNumeJucator.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelNumeJucator.Location = new System.Drawing.Point(841, 41);
+            this.labelNumeJucator.Location = new System.Drawing.Point(631, 33);
+            this.labelNumeJucator.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelNumeJucator.Name = "labelNumeJucator";
-            this.labelNumeJucator.Size = new System.Drawing.Size(109, 38);
+            this.labelNumeJucator.Size = new System.Drawing.Size(92, 31);
             this.labelNumeJucator.TabIndex = 1;
             this.labelNumeJucator.Text = "label1";
             // 
             // exitButton_Joc
             // 
-            this.exitButton_Joc.Location = new System.Drawing.Point(1123, 690);
-            this.exitButton_Joc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.exitButton_Joc.Location = new System.Drawing.Point(842, 561);
+            this.exitButton_Joc.Margin = new System.Windows.Forms.Padding(2);
             this.exitButton_Joc.Name = "exitButton_Joc";
-            this.exitButton_Joc.Size = new System.Drawing.Size(80, 23);
+            this.exitButton_Joc.Size = new System.Drawing.Size(60, 19);
             this.exitButton_Joc.TabIndex = 2;
             this.exitButton_Joc.Text = "Exit";
             this.exitButton_Joc.UseVisualStyleBackColor = true;
@@ -206,27 +215,27 @@
             // zar1
             // 
             this.zar1.Image = global::Nu_te_supara_frate.Properties.Resources.zar1;
-            this.zar1.Location = new System.Drawing.Point(755, 122);
-            this.zar1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.zar1.Location = new System.Drawing.Point(566, 99);
+            this.zar1.Margin = new System.Windows.Forms.Padding(2);
             this.zar1.Name = "zar1";
-            this.zar1.Size = new System.Drawing.Size(168, 154);
+            this.zar1.Size = new System.Drawing.Size(126, 125);
             this.zar1.TabIndex = 3;
             this.zar1.TabStop = false;
             this.zar1.Click += new System.EventHandler(this.DaCuZarul);
             // 
             // fereastraJoc
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1215, 748);
+            this.ClientSize = new System.Drawing.Size(911, 608);
             this.Controls.Add(this.zar1);
             this.Controls.Add(this.exitButton_Joc);
             this.Controls.Add(this.labelNumeJucator);
             this.Controls.Add(this.panelJoc);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "fereastraJoc";
@@ -251,16 +260,16 @@
 
         public System.Windows.Forms.Panel panelJoc;
         private System.Windows.Forms.Label labelSalut;
-        private System.Windows.Forms.PictureBox pAlbastru1;
-        private System.Windows.Forms.PictureBox pAlbastru4;
-        private System.Windows.Forms.PictureBox pAlbastru3;
-        private System.Windows.Forms.PictureBox pAlbastru2;
-        private System.Windows.Forms.PictureBox pRosu1;
-        private System.Windows.Forms.PictureBox pRosu4;
-        private System.Windows.Forms.PictureBox pRosu3;
-        private System.Windows.Forms.PictureBox pRosu2;
         private System.Windows.Forms.Label labelNumeJucator;
         private System.Windows.Forms.Button exitButton_Joc;
         public System.Windows.Forms.PictureBox zar1;
+        public System.Windows.Forms.PictureBox pAlbastru1;
+        public System.Windows.Forms.PictureBox pAlbastru4;
+        public System.Windows.Forms.PictureBox pAlbastru3;
+        public System.Windows.Forms.PictureBox pAlbastru2;
+        public System.Windows.Forms.PictureBox pRosu1;
+        public System.Windows.Forms.PictureBox pRosu4;
+        public System.Windows.Forms.PictureBox pRosu3;
+        public System.Windows.Forms.PictureBox pRosu2;
     }
 }
