@@ -59,6 +59,8 @@
     <Compile Include="fereastraJoc.Designer.cs">
       <DependentUpon>fereastraJoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="Joc.cs" />
+    <Compile Include="Jucator.cs" />
     <Compile Include="JucatorAlbastru.cs" />
     <Compile Include="JucatorRosu.cs" />
     <Compile Include="Login.cs">

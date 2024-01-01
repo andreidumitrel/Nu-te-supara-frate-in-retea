@@ -53,10 +53,10 @@ namespace Nu_te_supara_frate
             Coordonate.Add(new Point(207 + corectieX, 67  + corectieY));//17
             Coordonate.Add(new Point(203 + corectieX, 13  + corectieY));//18 colt
             Coordonate.Add(new Point(247 + corectieX, 14  + corectieY));//19
-            Coordonate.Add(new Point(247 + corectieX, 63  + corectieY));//final1
-            Coordonate.Add(new Point(250 + corectieX, 116 + corectieY));//final2
-            Coordonate.Add(new Point(250 + corectieX, 167 + corectieY));//final3
-            Coordonate.Add(new Point(248 + corectieX, 221 + corectieY));//final4
+            Coordonate.Add(new Point(247 + corectieX, 63  + corectieY));//40final1
+            Coordonate.Add(new Point(250 + corectieX, 116 + corectieY));//41final2
+            Coordonate.Add(new Point(250 + corectieX, 167 + corectieY));//42final3
+            Coordonate.Add(new Point(248 + corectieX, 221 + corectieY));//43final4
         }
     }
 }

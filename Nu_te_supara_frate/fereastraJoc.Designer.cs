@@ -42,6 +42,9 @@
             this.labelNumeJucator = new System.Windows.Forms.Label();
             this.exitButton_Joc = new System.Windows.Forms.Button();
             this.zar1 = new System.Windows.Forms.PictureBox();
+            this.labelNumeInamic = new System.Windows.Forms.Label();
+            this.labelRandAlbastru = new System.Windows.Forms.Label();
+            this.labelRandRosu = new System.Windows.Forms.Label();
             this.panelJoc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pRosu4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRosu3)).BeginInit();
@@ -72,7 +75,6 @@
             this.panelJoc.Name = "panelJoc";
             this.panelJoc.Size = new System.Drawing.Size(526, 585);
             this.panelJoc.TabIndex = 0;
-            this.panelJoc.Paint += new System.Windows.Forms.PaintEventHandler(this.panelJoc_Paint);
             // 
             // pRosu4
             // 
@@ -192,14 +194,16 @@
             // labelNumeJucator
             // 
             this.labelNumeJucator.AutoSize = true;
+            this.labelNumeJucator.BackColor = System.Drawing.Color.White;
             this.labelNumeJucator.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNumeJucator.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelNumeJucator.Location = new System.Drawing.Point(631, 33);
+            this.labelNumeJucator.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.labelNumeJucator.Location = new System.Drawing.Point(674, 93);
             this.labelNumeJucator.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelNumeJucator.Name = "labelNumeJucator";
-            this.labelNumeJucator.Size = new System.Drawing.Size(92, 31);
+            this.labelNumeJucator.Size = new System.Drawing.Size(111, 31);
             this.labelNumeJucator.TabIndex = 1;
-            this.labelNumeJucator.Text = "label1";
+            this.labelNumeJucator.Text = "Jucator";
+            this.labelNumeJucator.Click += new System.EventHandler(this.labelNumeJucator_Click);
             // 
             // exitButton_Joc
             // 
@@ -215,13 +219,51 @@
             // zar1
             // 
             this.zar1.Image = global::Nu_te_supara_frate.Properties.Resources.zar1;
-            this.zar1.Location = new System.Drawing.Point(566, 99);
+            this.zar1.Location = new System.Drawing.Point(680, 242);
             this.zar1.Margin = new System.Windows.Forms.Padding(2);
             this.zar1.Name = "zar1";
             this.zar1.Size = new System.Drawing.Size(126, 125);
             this.zar1.TabIndex = 3;
             this.zar1.TabStop = false;
             this.zar1.Click += new System.EventHandler(this.DaCuZarul);
+            // 
+            // labelNumeInamic
+            // 
+            this.labelNumeInamic.AutoSize = true;
+            this.labelNumeInamic.BackColor = System.Drawing.Color.White;
+            this.labelNumeInamic.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNumeInamic.ForeColor = System.Drawing.Color.Red;
+            this.labelNumeInamic.Location = new System.Drawing.Point(674, 478);
+            this.labelNumeInamic.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelNumeInamic.Name = "labelNumeInamic";
+            this.labelNumeInamic.Size = new System.Drawing.Size(100, 31);
+            this.labelNumeInamic.TabIndex = 4;
+            this.labelNumeInamic.Text = "Inamic";
+            // 
+            // labelRandAlbastru
+            // 
+            this.labelRandAlbastru.AutoSize = true;
+            this.labelRandAlbastru.BackColor = System.Drawing.Color.Lavender;
+            this.labelRandAlbastru.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRandAlbastru.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelRandAlbastru.Location = new System.Drawing.Point(685, 138);
+            this.labelRandAlbastru.Name = "labelRandAlbastru";
+            this.labelRandAlbastru.Size = new System.Drawing.Size(91, 20);
+            this.labelRandAlbastru.TabIndex = 5;
+            this.labelRandAlbastru.Text = "Randul tau!";
+            this.labelRandAlbastru.Visible = false;
+            // 
+            // labelRandRosu
+            // 
+            this.labelRandRosu.AutoSize = true;
+            this.labelRandRosu.BackColor = System.Drawing.Color.Lavender;
+            this.labelRandRosu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRandRosu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelRandRosu.Location = new System.Drawing.Point(685, 526);
+            this.labelRandRosu.Name = "labelRandRosu";
+            this.labelRandRosu.Size = new System.Drawing.Size(91, 20);
+            this.labelRandRosu.TabIndex = 6;
+            this.labelRandRosu.Text = "Randul tau!";
             // 
             // fereastraJoc
             // 
@@ -230,6 +272,9 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(911, 608);
+            this.Controls.Add(this.labelRandRosu);
+            this.Controls.Add(this.labelRandAlbastru);
+            this.Controls.Add(this.labelNumeInamic);
             this.Controls.Add(this.zar1);
             this.Controls.Add(this.exitButton_Joc);
             this.Controls.Add(this.labelNumeJucator);
@@ -271,5 +316,8 @@
         public System.Windows.Forms.PictureBox pRosu4;
         public System.Windows.Forms.PictureBox pRosu3;
         public System.Windows.Forms.PictureBox pRosu2;
+        private System.Windows.Forms.Label labelNumeInamic;
+        private System.Windows.Forms.Label labelRandAlbastru;
+        private System.Windows.Forms.Label labelRandRosu;
     }
 }
