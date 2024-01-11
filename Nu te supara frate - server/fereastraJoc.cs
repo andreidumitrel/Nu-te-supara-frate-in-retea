@@ -1,0 +1,246 @@
+﻿using System;
+using System.IO;
+using System.Net.Sockets;
+using System.Security.AccessControl;
+using System.Threading;
+using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
+
+namespace Nu_te_supara_frate
+{
+    public partial class fereastraJoc : Form
+    {   //SERVER
+        Zar zar;
+        private Joc joc;
+        int numar_zar;
+        private string castigator;
+
+        public TcpListener listener;
+        public String listener_data;
+        Thread t;
+        NetworkStream stream_server;
+        bool work_thread;
+        private static fereastraJoc server_form;
+
+        public fereastraJoc()
+        {   
+            InitializeComponent();
+            if(Login.numeJucator!="")
+                labelNumeJucator.Text = Login.numeJucator;
+            zar = new Zar();
+            joc = new Joc(this);
+
+            listener = new TcpListener(System.Net.IPAddress.Any, 5000);
+            listener.Start();
+            t = new Thread(new ThreadStart(asculta_server));
+            work_thread = true;
+            t.Start();
+
+            server_form = this;
+            //this.J1.Text = "";
+        }
+
+        public void asculta_server()
+        {
+            while (work_thread)
+            {
+                Socket socketServer = listener.AcceptSocket();
+                try
+                {
+                    stream_server = new NetworkStream(socketServer);
+                    StreamReader citireServer = new StreamReader(stream_server);
+
+                    while (work_thread)
+                    {
+
+                        string dateServer = citireServer.ReadLine();
+
+                        MethodInvoker m = new MethodInvoker(() =>
+                        {
+                            //string dataaa = dateServer;
+                            if (dateServer[0] == 'z')
+                            {   numar_zar = int.Parse(dateServer[1] + "");
+                                zar.setNumarZar(numar_zar,this);
+
+                            }
+                            else if (dateServer[0] == 'n')
+                            {   labelNumeInamic.Text = "";
+                                for (int i = 1; i < dateServer.Length; i++)
+                                {   
+                                    labelNumeInamic.Text += dateServer[i];
+                                }
+                            }
+                            else if (dateServer[0] == 'p')
+                            {
+                                switch (Convert.ToInt32(dateServer[1] + ""))
+                                {
+                                    case 1:
+                                        joc.Muta("Rosu", 1, zar.getNumarZar(), this);
+                                        break;
+                                    case 2:
+                                        joc.Muta("Rosu", 2, zar.getNumarZar(), this);
+                                        break;
+                                    case 3:
+                                        joc.Muta("Rosu", 3, zar.getNumarZar(), this);
+                                        break;
+                                    case 4:
+                                        joc.Muta("Rosu", 4, zar.getNumarZar(), this);
+                                        break;
+                                }
+                            }
+
+
+
+                        });
+                        server_form.Invoke(m);
+
+                    }
+                    stream_server.Close();
+                }
+                catch (Exception e)
+                {
+                    #if LOG
+                        Console.WriteLine(e.Message);
+                    #endif
+                }
+                socketServer.Close();
+            }
+
+        }
+
+        public string getNumeJucator()
+        {
+            if (Login.numeJucator != "")
+                return labelNumeJucator.Text;
+            return "Jucator";
+        }
+
+        public string getCastigator()
+        {
+            return castigator;
+        }
+
+        public void castig(string numeCastigator)
+        {
+            castigator = numeCastigator;
+            FereastraCastig ferCastig = new FereastraCastig(this);
+            ferCastig.Show();
+            this.Hide();
+        }
+
+        public void setLabelRand(string rand)
+        {
+            if (rand == "Rosu")
+            {
+                labelRandRosu.Visible = true;
+                labelRandAlbastru.Visible = false;
+            }
+            else if (rand == "Albastru")
+            {
+                labelRandRosu.Visible = false;
+                labelRandAlbastru.Visible = true;
+            }
+        }
+
+
+        private void exitButton_Joc_click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void DaCuZarul(object sender, EventArgs e)
+        {
+            numar_zar=zar.daCuZarul(this);
+            if (joc.getRand() == "Rosu" && (!joc.getRosuIesit()) && numar_zar!=6)
+                joc.setRand("Albastru");
+            else if (joc.getRand() == "Albastru" && (!joc.getAlbastruIesit()) && numar_zar!=6)
+                joc.setRand("Rosu");
+
+            StreamWriter scriere = new StreamWriter(stream_server);
+            scriere.AutoFlush = true; // enable automatic flushing
+            scriere.WriteLine("z" + Convert.ToString(numar_zar));   //se trimit datele printr-un string care incepe cu "z"
+
+            //pentru ca la momentul primirii sa ne dam seama ca stringul prmit este o informatie despre zar
+
+        }
+
+        private void pRosu1_Click(object sender, EventArgs e)
+        {
+            //joc.Muta("Rosu",1,numar_zar,this);
+        }
+
+        private void pRosu2_Click(object sender, EventArgs e)
+        {
+            //joc.Muta("Rosu", 2, numar_zar, this);
+        }
+
+        private void pRosu3_Click(object sender, EventArgs e)
+        {
+            //joc.Muta("Rosu", 3, numar_zar, this);
+        }
+
+        private void pRosu4_Click(object sender, EventArgs e)
+        {
+            //joc.Muta("Rosu", 4, numar_zar, this);
+        }
+
+        private void pAlbastru1_Click(object sender, EventArgs e)
+        {
+            joc.Muta("Albastru", 1, numar_zar, this);
+            StreamWriter scriere = new StreamWriter(stream_server);
+            scriere.AutoFlush = true;
+            scriere.WriteLine("p1");
+        }
+
+        private void pAlbastru2_Click(object sender, EventArgs e)
+        {
+            joc.Muta("Albastru", 2, numar_zar, this);
+            StreamWriter scriere = new StreamWriter(stream_server);
+            scriere.AutoFlush = true;
+            scriere.WriteLine("p2");
+        }
+
+        private void pAlbastru3_Click(object sender, EventArgs e)
+        {
+            joc.Muta("Albastru", 3, numar_zar, this);
+            StreamWriter scriere = new StreamWriter(stream_server);
+            scriere.AutoFlush = true;
+            scriere.WriteLine("p3");
+        }
+
+        private void pAlbastru4_Click(object sender, EventArgs e)
+        {
+            joc.Muta("Albastru", 4, numar_zar, this);
+            StreamWriter scriere = new StreamWriter(stream_server);
+            scriere.AutoFlush = true;
+            scriere.WriteLine("p4");
+        }
+
+        private void labelNumeJucator_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Tabla_Load(object sender, EventArgs e)
+        {
+            System.Threading.Thread.Sleep(5000);
+            while (true)
+            {
+                try
+                {   
+                    StreamWriter scriere = new StreamWriter(stream_server);
+                    scriere.AutoFlush = true; // enable automatic flushing
+                    scriere.WriteLine("n" + this.labelNumeJucator.Text);
+                    break;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Waiting for other player to join");
+
+
+                }
+            }
+        }
+    }
+}

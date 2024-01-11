@@ -9,6 +9,7 @@ namespace Nu_te_supara_frate
         Zar zar;
         private Joc joc;
         int numar_zar;
+        private string castigator;
 
         public fereastraJoc()
         {
@@ -17,10 +18,25 @@ namespace Nu_te_supara_frate
                 labelNumeJucator.Text = Login.numeJucator;
             zar = new Zar();
             joc = new Joc(this);
-            //jucatorRosu = new JucatorRosu();
-            //jucatorAlbastru = new JucatorAlbastru();
+        }
+        public string getNumeJucator()
+        {
+            if (Login.numeJucator != "")
+                return labelNumeJucator.Text;
+            return "Jucator";
+        }
 
+        public string getCastigator()
+        {
+            return castigator;
+        }
 
+        public void castig(string numeCastigator)
+        {
+            castigator = numeCastigator;
+            FereastraCastig ferCastig = new FereastraCastig(this);
+            ferCastig.Show();
+            this.Hide();
         }
 
         public void setLabelRand(string rand)
