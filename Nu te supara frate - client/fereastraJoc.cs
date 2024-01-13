@@ -4,6 +4,7 @@ using System.Net.Sockets;
 using System.Security.AccessControl;
 using System.Threading;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
@@ -53,7 +54,6 @@ namespace Nu_te_supara_frate
                         numar_zar = int.Parse(dateClient[1] + "");
                         zar.setNumarZar(numar_zar, this);
 
-                        trimiteRand();
                     }
                     else if (dateClient[0] == 'n')
                     {
@@ -158,11 +158,20 @@ namespace Nu_te_supara_frate
             else if (joc.getRand() == "Albastru" && (!joc.getAlbastruIesit()) && numar_zar!=6)
                 joc.setRand("Rosu");
 
+            if (joc.getRosuIesit() == false && numar_zar < 6)
+            {
+                joc.setRand("Albastru");
+                trimiteRand();
+            }
+
+            
+
             StreamWriter scriere = new StreamWriter(clientStream);
             scriere.AutoFlush = true; // enable automatic flushing
             scriere.WriteLine("z" + Convert.ToString(numar_zar));        
             //se trimit datele printr-un string care incepe cu "z"
             //pentru ca la momentul primirii sa ne dam seama ca stringul prmit este o informatie despre zar
+
 
         }
 

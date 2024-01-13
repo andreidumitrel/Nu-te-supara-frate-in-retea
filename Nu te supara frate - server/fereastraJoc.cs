@@ -55,6 +55,8 @@ namespace Nu_te_supara_frate
                     {
 
                         string dateServer = citireServer.ReadLine();
+                        if (dateServer != null)
+                            Console.WriteLine(dateServer);
 
                         MethodInvoker m = new MethodInvoker(() =>
                         {
@@ -62,7 +64,6 @@ namespace Nu_te_supara_frate
                             if (dateServer[0] == 'z')
                             {   numar_zar = int.Parse(dateServer[1] + "");
                                 zar.setNumarZar(numar_zar,this);
-                                trimiteRand();
 
                             }
                             else if (dateServer[0] == 'n')
@@ -74,7 +75,7 @@ namespace Nu_te_supara_frate
                                 trimiteRand();
                             }
                             else if (dateServer[0] == 'p')
-                            {
+                            {   Console.WriteLine(dateServer);
                                 switch (int.Parse(dateServer[1] + ""))
                                 {
                                     case 1:
@@ -189,11 +190,18 @@ namespace Nu_te_supara_frate
             else if (joc.getRand() == "Albastru" && (!joc.getAlbastruIesit()) && numar_zar!=6)
                 joc.setRand("Rosu");
 
+            if (joc.getAlbastruIesit() == false && numar_zar<6)
+            {
+                joc.setRand("Rosu");
+                trimiteRand();
+            }
+
             StreamWriter scriere = new StreamWriter(stream_server);
             scriere.AutoFlush = true; // enable automatic flushing
             scriere.WriteLine("z" + Convert.ToString(numar_zar));   //se trimit datele printr-un string care incepe cu "z"
 
             //pentru ca la momentul primirii sa ne dam seama ca stringul prmit este o informatie despre zar
+
 
         }
 
