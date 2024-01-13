@@ -62,6 +62,7 @@ namespace Nu_te_supara_frate
                             if (dateServer[0] == 'z')
                             {   numar_zar = int.Parse(dateServer[1] + "");
                                 zar.setNumarZar(numar_zar,this);
+                                trimiteRand();
 
                             }
                             else if (dateServer[0] == 'n')
@@ -70,10 +71,11 @@ namespace Nu_te_supara_frate
                                 {   
                                     labelNumeInamic.Text += dateServer[i];
                                 }
+                                trimiteRand();
                             }
                             else if (dateServer[0] == 'p')
                             {
-                                switch (Convert.ToInt32(dateServer[1] + ""))
+                                switch (int.Parse(dateServer[1] + ""))
                                 {
                                     case 1:
                                         joc.Muta("Rosu", 1, zar.getNumarZar(), this);
@@ -87,6 +89,18 @@ namespace Nu_te_supara_frate
                                     case 4:
                                         joc.Muta("Rosu", 4, zar.getNumarZar(), this);
                                         break;
+                                }
+                                trimiteRand();
+                            }
+                            else if (dateServer[0] == 'r')
+                            {
+                                if (dateServer[1] == 'a')
+                                {
+                                    joc.setRand("Albastru");
+                                }
+                                else if (dateServer[1] == 'r')
+                                {
+                                    joc.setRand("Rosu");
                                 }
                             }
 
@@ -119,6 +133,24 @@ namespace Nu_te_supara_frate
         public string getCastigator()
         {
             return castigator;
+        }
+
+        public void trimiteRand()
+        {
+            if (joc.getRand() ==
+                "Albastru") //verifica al cui jucator este randul si apoi trimite mesajul pentu a modifica si in client
+            {
+                StreamWriter scriere = new StreamWriter(stream_server);
+                scriere.AutoFlush = true;
+                scriere.WriteLine("ra");
+            }
+
+            if (joc.getRand() == "Rosu")
+            {
+                StreamWriter scriere = new StreamWriter(stream_server);
+                scriere.AutoFlush = true;
+                scriere.WriteLine("rr");
+            }
         }
 
         public void castig(string numeCastigator)

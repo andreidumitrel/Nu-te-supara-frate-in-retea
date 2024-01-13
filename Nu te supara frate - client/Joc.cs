@@ -1,6 +1,7 @@
 ﻿using System;
 using System.CodeDom;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,7 +45,7 @@ namespace Nu_te_supara_frate
                         {
                             case 1:
                                 mutaPion("Albastru",1,numarZar, ferJoc);
-                                if(numarZar != 6)
+                                if (numarZar != 6)
                                     setRand("Rosu");
                                 break;
                             case 2:

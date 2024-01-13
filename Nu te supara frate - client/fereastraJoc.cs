@@ -52,18 +52,20 @@ namespace Nu_te_supara_frate
                     {
                         numar_zar = int.Parse(dateClient[1] + "");
                         zar.setNumarZar(numar_zar, this);
+
+                        trimiteRand();
                     }
                     else if (dateClient[0] == 'n')
                     {
-                        for (int i = 1; i < dateClient.Length; i++)
-                        {
-                            labelNumeInamic.Text = "";
+                        labelNumeInamic.Text = ""; 
+                        for (int i = 1; i < dateClient.Length; i++){
                             labelNumeInamic.Text += dateClient[i];
                         }
+                        trimiteRand();
                     }
                     else if (dateClient[0] == 'p')
-                    {
-                        switch (Convert.ToInt32(dateClient[1] + ""))
+                    {   Console.WriteLine(dateClient);
+                        switch (int.Parse(dateClient[1] + ""))
                         {
                             case 1:
                                 joc.Muta("Albastru",1,zar.getNumarZar(),this);
@@ -77,7 +79,18 @@ namespace Nu_te_supara_frate
                             case 4:
                                 joc.Muta("Albastru",4,zar.getNumarZar(),this);
                                 break;
-                            break;
+                        }
+                        trimiteRand();
+                    }
+                    else if (dateClient[0] == 'r')
+                    {
+                        if (dateClient[1] == 'a')
+                        {
+                            joc.setRand("Albastru");
+                        }
+                        else if (dateClient[1] == 'r')
+                        {
+                            joc.setRand("Rosu");
                         }
                     }
 
@@ -89,6 +102,24 @@ namespace Nu_te_supara_frate
         public string getCastigator()
         {
             return castigator;
+        }
+
+        public void trimiteRand()
+        {
+            if (joc.getRand() ==
+                "Albastru") //verifica al cui jucator este randul si apoi trimite mesajul pentu a modifica si in server
+            {
+                StreamWriter scriere = new StreamWriter(clientStream);
+                scriere.AutoFlush = true;
+                scriere.WriteLine("ra");
+            }
+
+            if (joc.getRand() == "Rosu")
+            {
+                StreamWriter scriere = new StreamWriter(clientStream);
+                scriere.AutoFlush = true;
+                scriere.WriteLine("rr");
+            }
         }
 
         public void castig(string numeCastigator)
@@ -103,13 +134,13 @@ namespace Nu_te_supara_frate
         {
             if (rand == "Rosu")
             {
-                labelRandRosu.Visible = true;
                 labelRandAlbastru.Visible = false;
+                labelRandRosu.Visible = true;
             }
             else if (rand == "Albastru")
             {
-                labelRandRosu.Visible = false;
                 labelRandAlbastru.Visible = true;
+                labelRandRosu.Visible = false;
             }
         }
 
@@ -170,22 +201,22 @@ namespace Nu_te_supara_frate
 
         private void pAlbastru1_Click(object sender, EventArgs e)
         {
-            joc.Muta("Albastru", 1, numar_zar, this);
+            //joc.Muta("Albastru", 1, numar_zar, this);
         }
 
         private void pAlbastru2_Click(object sender, EventArgs e)
         {
-            joc.Muta("Albastru", 2, numar_zar, this);
+            //joc.Muta("Albastru", 2, numar_zar, this);
         }
 
         private void pAlbastru3_Click(object sender, EventArgs e)
         {
-            joc.Muta("Albastru", 3, numar_zar, this);
+            //joc.Muta("Albastru", 3, numar_zar, this);
         }
 
         private void pAlbastru4_Click(object sender, EventArgs e)
         {
-            joc.Muta("Albastru", 4, numar_zar, this);
+            //joc.Muta("Albastru", 4, numar_zar, this);
         }
 
         private void labelNumeJucator_Click(object sender, EventArgs e)
