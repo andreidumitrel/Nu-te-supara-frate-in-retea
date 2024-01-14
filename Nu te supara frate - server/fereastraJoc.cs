@@ -15,6 +15,7 @@ namespace Nu_te_supara_frate
         private Joc joc;
         int numar_zar;
         private string castigator;
+        private Login login;
 
         public TcpListener listener;
         public String listener_data;
@@ -23,11 +24,11 @@ namespace Nu_te_supara_frate
         bool work_thread;
         private static fereastraJoc server_form;
 
-        public fereastraJoc()
+        public fereastraJoc(Login login)
         {   
             InitializeComponent();
-            if(Login.numeJucator!="")
-                labelNumeJucator.Text = Login.numeJucator;
+            if(login.numeJucator!="")
+                labelNumeJucator.Text = login.numeJucator;
             zar = new Zar();
             joc = new Joc(this);
 
@@ -126,7 +127,7 @@ namespace Nu_te_supara_frate
 
         public string getNumeJucator()
         {
-            if (Login.numeJucator != "")
+            if (login.numeJucator != "")
                 return labelNumeJucator.Text;
             return "Jucator";
         }

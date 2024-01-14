@@ -34,12 +34,13 @@
             this.textBoxNume = new System.Windows.Forms.TextBox();
             this.buttonStart = new System.Windows.Forms.Button();
             this.labelServer = new System.Windows.Forms.Label();
+            this.labelIP = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // exitButton
             // 
             this.exitButton.Location = new System.Drawing.Point(528, 327);
-            this.exitButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.exitButton.Margin = new System.Windows.Forms.Padding(2);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(63, 24);
             this.exitButton.TabIndex = 0;
@@ -75,7 +76,7 @@
             // textBoxNume
             // 
             this.textBoxNume.Location = new System.Drawing.Point(302, 174);
-            this.textBoxNume.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxNume.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNume.Name = "textBoxNume";
             this.textBoxNume.Size = new System.Drawing.Size(152, 20);
             this.textBoxNume.TabIndex = 3;
@@ -85,7 +86,7 @@
             this.buttonStart.BackColor = System.Drawing.Color.White;
             this.buttonStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonStart.Location = new System.Drawing.Point(235, 243);
-            this.buttonStart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonStart.Margin = new System.Windows.Forms.Padding(2);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(146, 56);
             this.buttonStart.TabIndex = 4;
@@ -106,6 +107,16 @@
             this.labelServer.TabIndex = 5;
             this.labelServer.Text = "server";
             // 
+            // labelIP
+            // 
+            this.labelIP.AutoSize = true;
+            this.labelIP.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelIP.Location = new System.Drawing.Point(12, 338);
+            this.labelIP.Name = "labelIP";
+            this.labelIP.Size = new System.Drawing.Size(68, 13);
+            this.labelIP.TabIndex = 6;
+            this.labelIP.Text = "IP: 127.0.0.1";
+            // 
             // Login
             // 
             this.AcceptButton = this.buttonStart;
@@ -113,6 +124,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.labelIP);
             this.Controls.Add(this.labelServer);
             this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.textBoxNume);
@@ -121,7 +133,7 @@
             this.Controls.Add(this.exitButton);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Login";
             this.Text = "Nu te supara frate";
             this.ResumeLayout(false);
@@ -137,6 +149,7 @@
         private System.Windows.Forms.Button buttonStart;
         public System.Windows.Forms.TextBox textBoxNume;
         private System.Windows.Forms.Label labelServer;
+        private System.Windows.Forms.Label labelIP;
     }
 }
 

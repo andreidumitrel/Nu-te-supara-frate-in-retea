@@ -34,6 +34,8 @@
             this.textBoxNume = new System.Windows.Forms.TextBox();
             this.buttonStart = new System.Windows.Forms.Button();
             this.labelClient = new System.Windows.Forms.Label();
+            this.textBoxIP = new System.Windows.Forms.TextBox();
+            this.labelIP = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // exitButton
@@ -105,6 +107,26 @@
             this.labelClient.TabIndex = 5;
             this.labelClient.Text = "client";
             // 
+            // textBoxIP
+            // 
+            this.textBoxIP.Location = new System.Drawing.Point(138, 337);
+            this.textBoxIP.Name = "textBoxIP";
+            this.textBoxIP.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxIP.Size = new System.Drawing.Size(119, 20);
+            this.textBoxIP.TabIndex = 6;
+            this.textBoxIP.Text = "127.0.0.1";
+            // 
+            // labelIP
+            // 
+            this.labelIP.AutoSize = true;
+            this.labelIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelIP.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelIP.Location = new System.Drawing.Point(17, 336);
+            this.labelIP.Name = "labelIP";
+            this.labelIP.Size = new System.Drawing.Size(122, 18);
+            this.labelIP.TabIndex = 7;
+            this.labelIP.Text = "Adresa IP Server:";
+            // 
             // Login
             // 
             this.AcceptButton = this.buttonStart;
@@ -112,6 +134,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.labelIP);
+            this.Controls.Add(this.textBoxIP);
             this.Controls.Add(this.labelClient);
             this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.textBoxNume);
@@ -137,6 +161,8 @@
         private System.Windows.Forms.Button buttonStart;
         public System.Windows.Forms.TextBox textBoxNume;
         private System.Windows.Forms.Label labelClient;
+        private System.Windows.Forms.Label labelIP;
+        public System.Windows.Forms.TextBox textBoxIP;
     }
 }
 

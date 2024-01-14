@@ -16,6 +16,8 @@ namespace Nu_te_supara_frate
         private Joc joc;
         int numar_zar;
         private string castigator;
+        private string ip;
+        private Login login;
 
         public TcpClient client;
         public NetworkStream clientStream;
@@ -23,19 +25,20 @@ namespace Nu_te_supara_frate
         public fereastraJoc clientForm;
         public Thread t;
 
-        public fereastraJoc()
+        public fereastraJoc(Login login)
         {
             InitializeComponent();
-            if(Login.numeJucator!="")
-                labelNumeJucator.Text = Login.numeJucator;
+            if(login.numeJucator!="")
+                labelNumeJucator.Text = login.numeJucator;
             zar = new Zar();
             joc = new Joc(this);
+            ip = login.textBoxIP.Text;
 
             clientForm = this;
         }
         public string getNumeJucator()
         {
-            if (Login.numeJucator != "")
+            if (login.numeJucator != "")
                 return labelNumeJucator.Text;
             return "Jucator";
         }
@@ -214,24 +217,16 @@ namespace Nu_te_supara_frate
         }
 
         private void pAlbastru1_Click(object sender, EventArgs e)
-        {
-            //joc.Muta("Albastru", 1, numar_zar, this);
-        }
+        { }
 
         private void pAlbastru2_Click(object sender, EventArgs e)
-        {
-            //joc.Muta("Albastru", 2, numar_zar, this);
-        }
+        {}
 
         private void pAlbastru3_Click(object sender, EventArgs e)
-        {
-            //joc.Muta("Albastru", 3, numar_zar, this);
-        }
+        {}
 
         private void pAlbastru4_Click(object sender, EventArgs e)
-        {
-            //joc.Muta("Albastru", 4, numar_zar, this);
-        }
+        {}
 
         private void labelNumeJucator_Click(object sender, EventArgs e)
         {
@@ -240,7 +235,7 @@ namespace Nu_te_supara_frate
 
         private void Tabla_Load(object sender, EventArgs e)
         {
-            client = new TcpClient("127.0.0.1", 5000);
+            client = new TcpClient(ip, 5000);//127.0.0.1
             ascult = true;
             t = new Thread(new ThreadStart(Asculta_client)); 
             //se conecteaza pe ip local si porneste metoda

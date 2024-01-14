@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net;
 using System.Windows.Forms;
 
 namespace Nu_te_supara_frate
@@ -6,12 +7,15 @@ namespace Nu_te_supara_frate
 
     public partial class Login : Form
     {
-        public static string numeJucator;
+        public string numeJucator;
 
 
         public Login()
         {
             InitializeComponent();
+            string hostName = Dns.GetHostName();
+            string IP = Dns.GetHostByName(hostName).AddressList[0].ToString();
+            labelIP.Text = "IP: " + IP;
 
         }
 
@@ -23,7 +27,7 @@ namespace Nu_te_supara_frate
         private void buttonStart_click(object sender, EventArgs e)
         {
             numeJucator = textBoxNume.Text;
-            fereastraJoc fereastraJoc = new fereastraJoc();
+            fereastraJoc fereastraJoc = new fereastraJoc(this);
             fereastraJoc.Show();
             this.Hide();
         }
@@ -38,6 +42,11 @@ namespace Nu_te_supara_frate
         {
             if (e.KeyChar == (char)Keys.Enter)
                 buttonStart.PerformClick();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

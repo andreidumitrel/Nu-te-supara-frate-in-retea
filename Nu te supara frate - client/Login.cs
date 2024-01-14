@@ -6,7 +6,7 @@ namespace Nu_te_supara_frate
 
     public partial class Login : Form
     {
-        public static string numeJucator;
+        public string numeJucator;
 
 
         public Login()
@@ -23,7 +23,7 @@ namespace Nu_te_supara_frate
         private void buttonStart_click(object sender, EventArgs e)
         {
             numeJucator = textBoxNume.Text;
-            fereastraJoc fereastraJoc = new fereastraJoc();
+            fereastraJoc fereastraJoc = new fereastraJoc(this);
             fereastraJoc.Show();
             this.Hide();
         }
