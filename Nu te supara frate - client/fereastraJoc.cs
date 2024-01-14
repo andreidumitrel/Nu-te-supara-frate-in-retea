@@ -152,26 +152,31 @@ namespace Nu_te_supara_frate
 
         private void DaCuZarul(object sender, EventArgs e)
         {
-            numar_zar=zar.daCuZarul(this);
-            if (joc.getRand() == "Rosu" && (!joc.getRosuIesit()) && numar_zar!=6)
-                joc.setRand("Albastru");
-            else if (joc.getRand() == "Albastru" && (!joc.getAlbastruIesit()) && numar_zar!=6)
-                joc.setRand("Rosu");
-
-            if (joc.getRosuIesit() == false && numar_zar < 6)
+            if (joc.getRand() == "Rosu")
             {
-                joc.setRand("Albastru");
-                trimiteRand();
-            }
-
+                numar_zar = zar.daCuZarul(this);
             
 
-            StreamWriter scriere = new StreamWriter(clientStream);
-            scriere.AutoFlush = true; // enable automatic flushing
-            scriere.WriteLine("z" + Convert.ToString(numar_zar));        
-            //se trimit datele printr-un string care incepe cu "z"
-            //pentru ca la momentul primirii sa ne dam seama ca stringul prmit este o informatie despre zar
+                if (joc.getRand() == "Rosu" && (!joc.getRosuIesit()) && numar_zar != 6)
+                    joc.setRand("Albastru");
+                else if (joc.getRand() == "Albastru" && (!joc.getAlbastruIesit()) && numar_zar != 6)
+                    joc.setRand("Rosu");
 
+                if (joc.getRosuIesit() == false && numar_zar < 6)
+                {
+                    joc.setRand("Albastru");
+                    trimiteRand();
+                }
+                StreamWriter scriere = new StreamWriter(clientStream);
+                scriere.AutoFlush = true; // enable automatic flushing
+                scriere.WriteLine("z" + Convert.ToString(numar_zar));
+                //se trimit datele printr-un string care incepe cu "z"
+                //pentru ca la momentul primirii sa ne dam seama ca stringul prmit este o informatie despre zar
+            }
+            else
+            {
+                MessageBox.Show("Nu este randul tau!");
+            }
 
         }
 
@@ -237,11 +242,11 @@ namespace Nu_te_supara_frate
         {
             client = new TcpClient("127.0.0.1", 5000);
             ascult = true;
-            t = new Thread(new ThreadStart(Asculta_client)); //se conecteaza pe ip local si porneste metoda
+            t = new Thread(new ThreadStart(Asculta_client)); 
+            //se conecteaza pe ip local si porneste metoda
             //de asculta pe un th separat
             t.Start();
             clientStream = client.GetStream();
-            //System.Threading.Thread.Sleep(2000);
 
             StreamWriter scriere = new StreamWriter(clientStream);
             scriere.AutoFlush = true; // enable automatic flushing

@@ -184,46 +184,37 @@ namespace Nu_te_supara_frate
 
         private void DaCuZarul(object sender, EventArgs e)
         {
-            numar_zar=zar.daCuZarul(this);
-            if (joc.getRand() == "Rosu" && (!joc.getRosuIesit()) && numar_zar!=6)
-                joc.setRand("Albastru");
-            else if (joc.getRand() == "Albastru" && (!joc.getAlbastruIesit()) && numar_zar!=6)
-                joc.setRand("Rosu");
-
-            if (joc.getAlbastruIesit() == false && numar_zar<6)
+            if (joc.getRand() == "Albastru")
             {
-                joc.setRand("Rosu");
-                trimiteRand();
+                numar_zar = zar.daCuZarul(this);
+
+                if (joc.getRand() == "Rosu" && (!joc.getRosuIesit()) && numar_zar != 6)
+                    joc.setRand("Albastru");
+                else if (joc.getRand() == "Albastru" && (!joc.getAlbastruIesit()) && numar_zar != 6)
+                    joc.setRand("Rosu");
+
+                if (joc.getAlbastruIesit() == false && numar_zar < 6)
+                {
+                    joc.setRand("Rosu");
+                    trimiteRand();
+                }
+
+                StreamWriter scriere = new StreamWriter(stream_server);
+                scriere.AutoFlush = true; // enable automatic flushing
+                scriere.WriteLine("z" + Convert.ToString(numar_zar));
+                //se trimit datele printr-un string care incepe cu "z"
+                //pentru ca la momentul primirii sa ne dam seama ca stringul prmit este o informatie despre zar
             }
-
-            StreamWriter scriere = new StreamWriter(stream_server);
-            scriere.AutoFlush = true; // enable automatic flushing
-            scriere.WriteLine("z" + Convert.ToString(numar_zar));   //se trimit datele printr-un string care incepe cu "z"
-
-            //pentru ca la momentul primirii sa ne dam seama ca stringul prmit este o informatie despre zar
-
+            else
+                MessageBox.Show("Nu este randul tau!");
+            
 
         }
 
-        private void pRosu1_Click(object sender, EventArgs e)
-        {
-            //joc.Muta("Rosu",1,numar_zar,this);
-        }
-
-        private void pRosu2_Click(object sender, EventArgs e)
-        {
-            //joc.Muta("Rosu", 2, numar_zar, this);
-        }
-
-        private void pRosu3_Click(object sender, EventArgs e)
-        {
-            //joc.Muta("Rosu", 3, numar_zar, this);
-        }
-
-        private void pRosu4_Click(object sender, EventArgs e)
-        {
-            //joc.Muta("Rosu", 4, numar_zar, this);
-        }
+        private void pRosu1_Click(object sender, EventArgs e) {} 
+        private void pRosu2_Click(object sender, EventArgs e) {}
+        private void pRosu3_Click(object sender, EventArgs e) {}
+        private void pRosu4_Click(object sender, EventArgs e) {}
 
         private void pAlbastru1_Click(object sender, EventArgs e)
         {
@@ -255,11 +246,6 @@ namespace Nu_te_supara_frate
             StreamWriter scriere = new StreamWriter(stream_server);
             scriere.AutoFlush = true;
             scriere.WriteLine("p4");
-        }
-
-        private void labelNumeJucator_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void Tabla_Load(object sender, EventArgs e)

@@ -203,7 +203,6 @@
             this.labelNumeJucator.Size = new System.Drawing.Size(111, 31);
             this.labelNumeJucator.TabIndex = 1;
             this.labelNumeJucator.Text = "Jucator";
-            this.labelNumeJucator.Click += new System.EventHandler(this.labelNumeJucator_Click);
             // 
             // exitButton_Joc
             // 
