@@ -38,9 +38,7 @@ namespace Nu_te_supara_frate
         }
         public string getNumeJucator()
         {
-            if (login.numeJucator != "")
                 return labelNumeJucator.Text;
-            return "Jucator";
         }
 
         public void Asculta_client()
@@ -214,23 +212,6 @@ namespace Nu_te_supara_frate
             StreamWriter scriere = new StreamWriter(clientStream);
             scriere.AutoFlush = true;
             scriere.WriteLine("p4");
-        }
-
-        private void pAlbastru1_Click(object sender, EventArgs e)
-        { }
-
-        private void pAlbastru2_Click(object sender, EventArgs e)
-        {}
-
-        private void pAlbastru3_Click(object sender, EventArgs e)
-        {}
-
-        private void pAlbastru4_Click(object sender, EventArgs e)
-        {}
-
-        private void labelNumeJucator_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void Tabla_Load(object sender, EventArgs e)

@@ -16,7 +16,6 @@ namespace Nu_te_supara_frate
             string hostName = Dns.GetHostName();
             string IP = Dns.GetHostByName(hostName).AddressList[0].ToString();
             labelIP.Text = "IP: " + IP;
-
         }
 
         private void exitButtonClick(object sender, EventArgs e)

@@ -127,9 +127,7 @@ namespace Nu_te_supara_frate
 
         public string getNumeJucator()
         {
-            if (login.numeJucator != "")
                 return labelNumeJucator.Text;
-            return "Jucator";
         }
 
         public string getCastigator()
@@ -251,7 +249,7 @@ namespace Nu_te_supara_frate
 
         private void Tabla_Load(object sender, EventArgs e)
         {
-            System.Threading.Thread.Sleep(5000);
+            Thread.Sleep(5000);
             while (true)
             {
                 try

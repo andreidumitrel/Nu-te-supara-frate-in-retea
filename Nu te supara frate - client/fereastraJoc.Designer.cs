@@ -136,7 +136,6 @@
             this.pAlbastru4.Size = new System.Drawing.Size(30, 35);
             this.pAlbastru4.TabIndex = 2;
             this.pAlbastru4.TabStop = false;
-            this.pAlbastru4.Click += new System.EventHandler(this.pAlbastru4_Click);
             // 
             // pAlbastru3
             // 
@@ -150,7 +149,6 @@
             this.pAlbastru3.Size = new System.Drawing.Size(30, 35);
             this.pAlbastru3.TabIndex = 2;
             this.pAlbastru3.TabStop = false;
-            this.pAlbastru3.Click += new System.EventHandler(this.pAlbastru3_Click);
             // 
             // pAlbastru2
             // 
@@ -164,7 +162,6 @@
             this.pAlbastru2.Size = new System.Drawing.Size(30, 35);
             this.pAlbastru2.TabIndex = 2;
             this.pAlbastru2.TabStop = false;
-            this.pAlbastru2.Click += new System.EventHandler(this.pAlbastru2_Click);
             // 
             // pAlbastru1
             // 
@@ -178,7 +175,6 @@
             this.pAlbastru1.Size = new System.Drawing.Size(30, 35);
             this.pAlbastru1.TabIndex = 1;
             this.pAlbastru1.TabStop = false;
-            this.pAlbastru1.Click += new System.EventHandler(this.pAlbastru1_Click);
             // 
             // labelSalut
             // 
@@ -203,7 +199,6 @@
             this.labelNumeJucator.Size = new System.Drawing.Size(111, 31);
             this.labelNumeJucator.TabIndex = 1;
             this.labelNumeJucator.Text = "Jucator";
-            this.labelNumeJucator.Click += new System.EventHandler(this.labelNumeJucator_Click);
             // 
             // exitButton_Joc
             // 
