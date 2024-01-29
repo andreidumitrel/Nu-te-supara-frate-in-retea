@@ -6,6 +6,7 @@ namespace Nu_te_supara_frate
     internal class Rosu
     {
         public List<Point> Coordonate { get; private set; }
+
         public Rosu()
         {
             Coordonate = new List<Point>();
@@ -20,21 +21,21 @@ namespace Nu_te_supara_frate
             Coordonate.Add(new Point(210 + corectieX, 317 + corectieY));//4 colt
             Coordonate.Add(new Point(163 + corectieX, 317 + corectieY));//5
             Coordonate.Add(new Point(116 + corectieX, 317 + corectieY));//6
-            Coordonate.Add(new Point(68 +  corectieX, 317 + corectieY));//7
-            Coordonate.Add(new Point(20 +  corectieX, 317 + corectieY));//8 colt
-            Coordonate.Add(new Point(18 +  corectieX, 271 + corectieY));//9
-            Coordonate.Add(new Point(17 +  corectieX, 227 + corectieY));//10 casa galben
-            Coordonate.Add(new Point(65 +  corectieX, 227 + corectieY));//11
+            Coordonate.Add(new Point(68  + corectieX, 317 + corectieY));//7
+            Coordonate.Add(new Point(20  + corectieX, 317 + corectieY));//8 colt
+            Coordonate.Add(new Point(18  + corectieX, 271 + corectieY));//9
+            Coordonate.Add(new Point(17  + corectieX, 227 + corectieY));//10 casa galben
+            Coordonate.Add(new Point(65  + corectieX, 227 + corectieY));//11
             Coordonate.Add(new Point(113 + corectieX, 227 + corectieY));//12
             Coordonate.Add(new Point(160 + corectieX, 227 + corectieY));//13
             Coordonate.Add(new Point(207 + corectieX, 227 + corectieY));//14 colt
             Coordonate.Add(new Point(207 + corectieX, 175 + corectieY));//15
             Coordonate.Add(new Point(207 + corectieX, 121 + corectieY));//16
-            Coordonate.Add(new Point(207 + corectieX, 67 + corectieY));//17
-            Coordonate.Add(new Point(203 + corectieX, 13 + corectieY));//18 colt
-            Coordonate.Add(new Point(247 + corectieX, 14 + corectieY));//19
-            Coordonate.Add(new Point(291 + corectieX, 14 + corectieY));//20 casa albastru
-            Coordonate.Add(new Point(291 + corectieX, 65 + corectieY));//21
+            Coordonate.Add(new Point(207 + corectieX, 67  + corectieY));//17
+            Coordonate.Add(new Point(203 + corectieX, 13  + corectieY));//18 colt
+            Coordonate.Add(new Point(247 + corectieX, 14  + corectieY));//19
+            Coordonate.Add(new Point(291 + corectieX, 14  + corectieY));//20 casa albastru
+            Coordonate.Add(new Point(291 + corectieX, 65  + corectieY));//21
             Coordonate.Add(new Point(291 + corectieX, 120 + corectieY));//22
             Coordonate.Add(new Point(294 + corectieX, 174 + corectieY));//23
             Coordonate.Add(new Point(289 + corectieX, 225 + corectieY));//24 colt

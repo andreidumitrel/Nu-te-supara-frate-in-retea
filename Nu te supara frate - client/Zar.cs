@@ -16,7 +16,7 @@ namespace Nu_te_supara_frate
         {
             numar_zar = 1;
         }
-        public int daCuZarul(fereastraJoc ferJoc)
+        public int daCuZarul(FereastraJoc ferJoc)
         {
 
             Random rnd = new Random();
@@ -52,7 +52,7 @@ namespace Nu_te_supara_frate
 
         }
 
-        public void setNumarZar(int numar_zar,fereastraJoc ferJoc)
+        public void setNumarZar(int numar_zar,FereastraJoc ferJoc)
         {
             this.numar_zar = numar_zar;
             switch (numar_zar)

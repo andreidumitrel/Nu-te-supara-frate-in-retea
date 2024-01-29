@@ -54,11 +54,11 @@
     <Compile Include="FereastraCastig.Designer.cs">
       <DependentUpon>FereastraCastig.cs</DependentUpon>
     </Compile>
-    <Compile Include="fereastraJoc.cs">
+    <Compile Include="FereastraJoc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fereastraJoc.Designer.cs">
-      <DependentUpon>fereastraJoc.cs</DependentUpon>
+    <Compile Include="FereastraJoc.Designer.cs">
+      <DependentUpon>FereastraJoc.cs</DependentUpon>
     </Compile>
     <Compile Include="Joc.cs" />
     <Compile Include="Jucator.cs" />
@@ -75,8 +75,8 @@
     <EmbeddedResource Include="FereastraCastig.resx">
       <DependentUpon>FereastraCastig.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fereastraJoc.resx">
-      <DependentUpon>fereastraJoc.cs</DependentUpon>
+    <EmbeddedResource Include="FereastraJoc.resx">
+      <DependentUpon>FereastraJoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

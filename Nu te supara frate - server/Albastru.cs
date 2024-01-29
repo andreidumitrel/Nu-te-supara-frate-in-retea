@@ -6,6 +6,7 @@ namespace Nu_te_supara_frate
     internal class Albastru
     {
         public List<Point> Coordonate { get; private set; }
+
         public Albastru()
         {
             Coordonate = new List<Point>();

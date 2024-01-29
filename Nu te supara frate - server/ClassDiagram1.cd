@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Nu_te_supara_frate.Joc">
+    <Position X="6.25" Y="2.25" Width="1.5" />
+    <InheritanceLine Type="Nu_te_supara_frate.Jucator" ManuallyRouted="true">
+      <Path>
+        <Point X="8.5" Y="3.477" />
+        <Point X="8.125" Y="3.477" />
+        <Point X="8.125" Y="3.477" />
+        <Point X="7.75" Y="3.477" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAACAAAAIgAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Joc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nu_te_supara_frate.Jucator">
+    <Position X="8.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAQAAAAAAAAAAQABAQAIACAAMg=</HashCode>
+      <FileName>Jucator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nu_te_supara_frate.Rosu">
+    <Position X="4.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rosu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nu_te_supara_frate.Albastru">
+    <Position X="6.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Albastru.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nu_te_supara_frate.Zar">
+    <Position X="4.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAgAAAAAAAAAACAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Zar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nu_te_supara_frate.FereastraJoc">
+    <Position X="1.75" Y="2.25" Width="2" />
+    <Members>
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Field Name="exitButton_Joc" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="labelNumeInamic" Hidden="true" />
+      <Field Name="labelNumeJucator" Hidden="true" />
+      <Field Name="labelRandAlbastru" Hidden="true" />
+      <Field Name="labelRandRosu" Hidden="true" />
+      <Field Name="labelSalut" Hidden="true" />
+      <Field Name="pAlbastru1" Hidden="true" />
+      <Method Name="pAlbastru1_Click" Hidden="true" />
+      <Field Name="pAlbastru2" Hidden="true" />
+      <Method Name="pAlbastru2_Click" Hidden="true" />
+      <Field Name="pAlbastru3" Hidden="true" />
+      <Method Name="pAlbastru3_Click" Hidden="true" />
+      <Field Name="pAlbastru4" Hidden="true" />
+      <Method Name="pAlbastru4_Click" Hidden="true" />
+      <Field Name="panelJoc" Hidden="true" />
+      <Field Name="pRosu1" Hidden="true" />
+      <Method Name="pRosu1_Click" Hidden="true" />
+      <Field Name="pRosu2" Hidden="true" />
+      <Method Name="pRosu2_Click" Hidden="true" />
+      <Field Name="pRosu3" Hidden="true" />
+      <Method Name="pRosu3_Click" Hidden="true" />
+      <Field Name="pRosu4" Hidden="true" />
+      <Method Name="pRosu4_Click" Hidden="true" />
+      <Field Name="t" Hidden="true" />
+      <Method Name="Tabla_Load" Hidden="true" />
+      <Field Name="zar1" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAADAAAyKDxAKgAAAgCAgCISAIA4BAjAAAQAAgYEHCI=</HashCode>
+      <FileName>FereastraJoc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,6 +1,6 @@
 ﻿namespace Nu_te_supara_frate
 {
-    partial class fereastraJoc
+    partial class FereastraJoc
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fereastraJoc));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FereastraJoc));
             this.panelJoc = new System.Windows.Forms.Panel();
             this.pRosu4 = new System.Windows.Forms.PictureBox();
             this.pRosu3 = new System.Windows.Forms.PictureBox();

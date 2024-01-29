@@ -9,7 +9,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace Nu_te_supara_frate
 {
-    public partial class fereastraJoc : Form
+    public partial class FereastraJoc : Form
     {   //SERVER
         Zar zar;
         private Joc joc;
@@ -22,9 +22,9 @@ namespace Nu_te_supara_frate
         Thread t;
         NetworkStream stream_server;
         bool work_thread;
-        private static fereastraJoc server_form;
+        private static FereastraJoc server_form;
 
-        public fereastraJoc(Login login)
+        public FereastraJoc(Login login)
         {   
             InitializeComponent();
             if(login.numeJucator!="")

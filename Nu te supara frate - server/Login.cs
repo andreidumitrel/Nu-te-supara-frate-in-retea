@@ -26,7 +26,7 @@ namespace Nu_te_supara_frate
         private void buttonStart_click(object sender, EventArgs e)
         {
             numeJucator = textBoxNume.Text;
-            fereastraJoc fereastraJoc = new fereastraJoc(this);
+            FereastraJoc fereastraJoc = new FereastraJoc(this);
             fereastraJoc.Show();
             this.Hide();
         }

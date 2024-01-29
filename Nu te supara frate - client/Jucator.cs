@@ -8,7 +8,7 @@ namespace Nu_te_supara_frate
 {
     internal class Jucator
     {
-        private fereastraJoc fereastra;
+        private FereastraJoc fereastra;
         Rosu rosu = new Rosu();
         Albastru albastru = new Albastru();
         private int[] locatie_curentaAlbastru;
@@ -17,7 +17,7 @@ namespace Nu_te_supara_frate
         bool albastruIesit;
         bool rosuIesit;
 
-        public Jucator(fereastraJoc ferJoc)
+        public Jucator(FereastraJoc ferJoc)
         {
             fereastra = ferJoc;
             locatie_curentaAlbastru = new int[5];
@@ -74,7 +74,7 @@ namespace Nu_te_supara_frate
 
         }
 
-        protected void mutaPion(string culoare, int numarPion, int numarzar, fereastraJoc ferJoc)
+        protected void mutaPion(string culoare, int numarPion, int numarzar, FereastraJoc ferJoc)
         {
             switch (culoare)
             {

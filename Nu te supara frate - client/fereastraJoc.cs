@@ -10,7 +10,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace Nu_te_supara_frate
 {
-    public partial class fereastraJoc : Form
+    public partial class FereastraJoc : Form
     {   //client
         Zar zar;
         private Joc joc;
@@ -22,10 +22,10 @@ namespace Nu_te_supara_frate
         public TcpClient client;
         public NetworkStream clientStream;
         public bool ascult;
-        public fereastraJoc clientForm;
+        public FereastraJoc clientForm;
         public Thread t;
 
-        public fereastraJoc(Login login)
+        public FereastraJoc(Login login)
         {
             InitializeComponent();
             if(login.numeJucator!="")

@@ -10,8 +10,8 @@ namespace Nu_te_supara_frate
     internal class Joc : Jucator
     {
         private string rand;
-        fereastraJoc fereastra;
-        public Joc(fereastraJoc ferJoc) : base(ferJoc)
+        FereastraJoc fereastra;
+        public Joc(FereastraJoc ferJoc) : base(ferJoc)
         { 
             
             Jucator jucator = new Jucator(ferJoc);
@@ -33,8 +33,9 @@ namespace Nu_te_supara_frate
 
 
 
-        public void Muta(string culoare, int numarPion, int numarZar, fereastraJoc ferJoc)
+        public void Muta(string culoare, int numarPion, int numarZar, FereastraJoc ferJoc)
         {
+
             switch (culoare)
             {
                 case "Albastru":
